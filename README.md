@@ -41,3 +41,4 @@ Due to time constraints I have completed an initial prototype, with scaffolding 
 * Pagination of results
 * Lazy-loading of images
 * Complete unit tests
+* Fine tuning of layout
