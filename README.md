@@ -24,7 +24,7 @@ Technologies Used:
 * Bootstrap (CSS only)
 
 Approach:
-Yeoman used to scaffold application using AngularJS and Bootstrap.  Design is a web page containing a scalable table with a toolbar containing the behaviours. Focus has been on the responsive nature of the design formultiple devices.
+Yeoman used to scaffold application using AngularJS and Bootstrap.  Design is a web page containing a scalable table with a toolbar containing the behaviours. Focus has been on the responsive nature of the design for multiple devices.
 
 Enhancements:
 Due to time constraints I have completed an initial prototype, with scaffolding for unit tests. With more time to spend I would add the following features with a particular emphasis on performance and testing:
