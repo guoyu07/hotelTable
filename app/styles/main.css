@@ -1,0 +1,31 @@
+.nav > li > a {
+  padding: 3px 15px;
+}
+
+#refinements {
+	font-size: 12px;
+}
+
+.thumbnail-column {
+	width: 1%;
+}
+
+.hotel-thumbnail {
+	margin-bottom: 0;
+	margin-right: 5px;
+}
+
+.hotel-image {
+	position: absolute;
+}
+
+@media screen and (max-width: 450px) {
+    .hotel-info {
+		word-wrap:break-word;
+		max-width: 120px;
+    }
+	.hotel-image {
+		display: none;
+	}
+}
+

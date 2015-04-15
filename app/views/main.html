@@ -1,0 +1,95 @@
+<header>
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul>
+  <h3 class="text-muted">Travel Republic</h3>
+</header>
+
+<section class="jumbotron">
+  <h1>Hotels</h1>
+</section>
+
+<section class="panel panel-default" id="refinements">
+	<div class="panel-heading">Refine</div>
+	<div class="panel-body">
+		<div class="row" id="refinements-container">
+			<div class="col-xs-6 col-md-2">
+				Search: <br><input type="text" placeholder="Search" size="15" ng-model="refinements.searchString"> 
+			</div>
+			<div class="col-xs-6 col-md-2">
+					Min Star Rating ({{refinements.starRating}}): <br><input type="range" min="0" max="5" ng-model="refinements.starRating"> 
+			</div>
+			<div class="col-xs-6 col-md-2">
+					Min User Rating ({{refinements.userRating}}): <br><input type="range" min="0" max="10" ng-model="refinements.userRating">
+			</div>
+			<div class="col-xs-6 col-md-2">
+					Min TrpRating(?): <br><input type="range" min="0" max="10" value="0">
+			</div>
+			<div class="col-xs-6 col-md-2">
+					Max Cost ({{refinements.maxCost}}): <br><input type="range" min="0" max="7000" ng-model="refinements.maxCost">
+			</div>
+			<div class="col-xs-6 col-md-2">
+					Sort by:<br>
+					<select ng-model="refinements.sortBy">
+						<option value="">None</option>
+						<option value="Distance">Distance</option>
+						<option value="Stars">Stars</option>
+						<option value="MinCost">Cost</option>
+						<option value="UserRating">User Rating</option>
+					</select>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="panel panel-default" id="results">
+	<div class="panel-heading">Results</div>
+	<div class="panel-body">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>
+						Hotel
+					</th>
+					<th>
+						User Rating
+					</th>
+					<th>
+						Cost
+					</th>
+					<th>
+						Distance
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="hotel-row" ng-repeat="hotel in hotels | orderBy: refinements.sortBy | filter: {Name:refinements.searchString} | filter: refineMatch" ng-mouseover="hotel.ShowBig = true" ng-mouseout="hotel.ShowBig = false">
+					<td class="hotel-info">
+						<img src="{{hotel.ImageUrl}}" class="thumbnail hotel-image" alt="{{hotel.Name}}" ng-show="hotel.ShowBig">
+						<img src="{{hotel.ThumbnailUrl}}" class="thumbnail pull-left hotel-thumbnail" alt="{{hotel.Name}}">
+						<div class="pull-left">
+							<strong>{{hotel.Name}}</strong>
+							<br><em>{{hotel.Location}}</em>
+							<br><span class="text-muted">{{hotel.Stars}} Stars</span>	
+						</div>
+					</td>
+					<td>
+						<span class="text-info">{{hotel.UserRatingTitle}}</span><br>
+						{{hotel.UserRating}} from {{hotel.UserRatingCount}} users.
+					</td>
+					<td>
+						{{hotel.MinCost}}
+					</td>
+					<td>
+						{{hotel.Distance | number:2}}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+
+<footer>
+  <p>&copy; Travel Republic (year)</p>
+</footer>
