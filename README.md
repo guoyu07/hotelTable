@@ -34,11 +34,13 @@ Installation:
 * grunt serve
 
 Approach:
-Yeoman used to scaffold application using AngularJS and Bootstrap.  Design is a web page containing a scalable table with a toolbar containing the behaviours. Focus has been on the responsive nature of the design for multiple devices.
+Yeoman used to scaffold application using AngularJS and Bootstrap.  Design is a web page containing a scalable table with a toolbar containing the behaviours. Focus has been on the responsive nature of the design for multiple devices. JSON is loaded from file.
 
 Enhancements:
 Due to time constraints I have completed an initial prototype, with scaffolding for unit tests. With more time to spend I would add the following features with a particular emphasis on performance and testing:
 * Pagination of results
 * Lazy-loading of images
 * Complete unit tests
-* Fine tuning of layout
+* Fine tuning of UI layout at smallest resolutions
+* Refactor custom filter to remove from controller
+* Connect hotel service to real JSON endpoint
