@@ -42,5 +42,7 @@ Due to time constraints I have completed an initial prototype, with scaffolding 
 * Lazy-loading of images
 * Complete unit tests
 * Fine tuning of UI layout at smallest resolutions
+* Add icons for star rating
+* Add better UI controls eg. range filter
 * Refactor custom filter to remove from controller
 * Connect hotel service to real JSON endpoint
