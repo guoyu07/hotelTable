@@ -23,6 +23,16 @@ Technologies Used:
 * AngularJS
 * Bootstrap (CSS only)
 
+Installation:
+* Install Node.JS (https://nodejs.org/) and NPM
+* From cmd line install bower: 
+* npm install -g bower
+* Navigate to folder and install app:
+* npm install
+* bower install
+* You can then use grunt to launch app:
+* grunt serve
+
 Approach:
 Yeoman used to scaffold application using AngularJS and Bootstrap.  Design is a web page containing a scalable table with a toolbar containing the behaviours. Focus has been on the responsive nature of the design for multiple devices.
 
