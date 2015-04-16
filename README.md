@@ -22,6 +22,7 @@ Technologies Used:
 * Yeoman
 * AngularJS
 * Bootstrap (CSS only)
+* Grunt
 
 Installation:
 * Install Node.JS (https://nodejs.org/) and NPM
