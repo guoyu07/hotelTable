@@ -47,4 +47,4 @@ Due to time constraints I have completed an initial prototype, with scaffolding 
 * Add better UI controls eg. range filter
 * Add animations to DOM operations
 * Refactor custom filter to remove from controller
-* Connect hotel service to real JSON endpoint
+* Connect hotel service to real JSON endpoint (REST service)
