@@ -26,8 +26,8 @@ Technologies Used:
 
 Installation:
 * Install Node.JS (https://nodejs.org/) and NPM
-* From cmd line install bower: 
-* npm install -g bower
+* From cmd line install bower and grunt: 
+* npm install -g bower grunt
 * Navigate to folder and install app:
 * npm install
 * bower install
